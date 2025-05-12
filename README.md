@@ -188,10 +188,84 @@ Detailed API documentation (e.g., using Swagger/OpenAPI) is a future enhancement
 
 Deploying this full-stack application to a production environment involves several steps for both the backend API and the frontend application. This guide provides a general overview of common deployment strategies.
 
+### 0. Initial Ubuntu Server Setup (Example)
+
+This section provides a basic checklist for preparing a new Ubuntu server instance before deploying the application. These steps assume you have just provisioned a new Ubuntu server (e.g., from a cloud provider like AWS, Google Cloud, DigitalOcean, Linode, etc.) and can connect to it via SSH.
+
+1.  **Connect to Your Server via SSH:**
+    You'll typically connect as the `root` user initially, or a default user provided by your hosting provider (which usually has `sudo` privileges). Replace `your_server_ip` with your server's actual IP address.
+    ```bash
+    ssh root@your_server_ip
+    # Or if you have a default user like 'ubuntu':
+    # ssh ubuntu@your_server_ip
+    ```
+
+2.  **Update System Packages:**
+    It's crucial to update your server's package list and upgrade existing packages to their latest versions.
+    ```bash
+    sudo apt update
+    sudo apt full-upgrade -y 
+    # Use 'full-upgrade' to handle changing dependencies if needed, or 'upgrade' for a simpler update.
+    ```
+
+3.  **Create a New Sudo User (Recommended for Security):**
+    Operating as `root` for everyday tasks is risky. It's better to create a new user with `sudo` (administrator) privileges.
+    ```bash
+    sudo adduser your_new_username 
+    # Follow the prompts to set a password and user information.
+    ```
+    Add the new user to the `sudo` group:
+    ```bash
+    sudo usermod -aG sudo your_new_username
+    ```
+    Now, log out of the `root` (or default user) session and log back in as your new user:
+    ```bash
+    exit
+    ssh your_new_username@your_server_ip
+    ```
+    From now on, use `sudo` before commands that require root privileges.
+
+4.  **Set Up Basic Firewall (UFW - Uncomplicated Firewall):**
+    UFW is a user-friendly interface for managing firewall rules.
+    ```bash
+    sudo ufw allow OpenSSH  # Allows SSH connections (so you don't lock yourself out!)
+    sudo ufw allow http     # Allows HTTP traffic (port 80)
+    sudo ufw allow https    # Allows HTTPS traffic (port 443)
+    # If your backend runs on a specific port you need to access directly (e.g., 5000 for initial testing before Nginx),
+    # you might temporarily allow it: sudo ufw allow 5000/tcp
+    sudo ufw enable         # Enable the firewall
+    ```
+    Check the status:
+    ```bash
+    sudo ufw status verbose
+    ```
+
+5.  **Set Timezone (Optional but Recommended):**
+    Check the current timezone:
+    ```bash
+    timedatectl
+    ```
+    If you need to change it (list available timezones with `timedatectl list-timezones`):
+    ```bash
+    sudo timedatectl set-timezone Your/Timezone 
+    # Example: sudo timedatectl set-timezone Europe/London
+    ```
+
+After these initial steps, your Ubuntu server will be more secure and up-to-date, ready for you to install the application-specific prerequisites (Node.js, MySQL, Nginx, PM2) as detailed in the subsequent "Prerequisites" and deployment steps in this README.
+
+**(Advanced Security Note:** For enhanced security, consider setting up SSH key-based authentication and disabling password authentication for SSH, and potentially changing the default SSH port. These steps are beyond this basic setup guide but are highly recommended for production servers.)
+
 ### Prerequisites
 
 -   **Production Server:** A virtual private server (VPS), cloud instance (e.g., AWS EC2, Google Cloud VM, Azure VM), or a Platform-as-a-Service (PaaS) that supports Node.js and static site hosting.
--   **Node.js & npm/yarn:** Installed on your production server for the backend.
+-   **Node.js & npm:** A modern version of Node.js (e.g., v18.x LTS or v20.x LTS recommended) and npm.
+    *   **Important:** Standard distribution repositories (e.g., via `sudo apt install nodejs`) often provide outdated Node.js versions. It's highly recommended to install Node.js using a version manager like NVM or by using distributions from NodeSource.
+    *   **To install Node.js v20.x using NodeSource on Debian/Ubuntu:**
+        ```bash
+        curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        ```
+    *   Verify installation: `node -v` and `npm -v`.
 -   **MySQL Database:** A production-ready MySQL database (this could be self-hosted on your server, or a managed database service like AWS RDS, Google Cloud SQL, etc.).
 -   **Domain Name:** Registered and configured to point to your server's IP address.
 -   **SSL Certificate:** To serve your application over HTTPS (essential for security). Let's Encrypt provides free certificates.
