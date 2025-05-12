@@ -1,0 +1,31 @@
+.flatmate-list-page {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.flatmate-profile-card-item {
+  margin-bottom: 20px;
+}
+
+.flatmate-profile-card-item .card-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.flatmate-profile-card-item .card-text strong {
+  color: #495057; /* Bootstrap default text color for emphasis */
+}
+
+.flatmate-profile-card-item .list-group-item {
+  border-left: none;
+  border-right: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.flatmate-profile-card-item .list-group-item:first-child {
+  border-top: none;
+}
+.flatmate-profile-card-item .list-group-item:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,28 @@
+.advice-page-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.advice-page-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.advice-page-container h2 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 5px;
+}
+
+.advice-section {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.advice-section p {
+  line-height: 1.6;
+}

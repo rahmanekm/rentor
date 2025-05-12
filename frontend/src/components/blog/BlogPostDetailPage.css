@@ -1,0 +1,58 @@
+.blog-post-detail-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.blog-post-detail-container h1 { /* Title of the post */
+  margin-bottom: 10px;
+}
+
+.blog-post-meta {
+  font-size: 0.9em;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+.blog-post-content {
+  line-height: 1.7;
+  font-size: 1.1em;
+}
+
+.blog-post-content h2 {
+  font-size: 1.8em;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 5px;
+}
+
+.blog-post-content h3 {
+  font-size: 1.5em;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.blog-post-content p {
+  margin-bottom: 1em;
+}
+
+.blog-post-content ul,
+.blog-post-content ol {
+  margin-bottom: 1em;
+  padding-left: 20px;
+}
+
+.blog-post-content li {
+  margin-bottom: 0.5em;
+}
+
+.blog-post-content strong {
+  font-weight: 600;
+}
+
+.blog-post-not-found {
+  text-align: center;
+  padding: 40px 0;
+}

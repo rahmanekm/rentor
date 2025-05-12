@@ -1,0 +1,50 @@
+.post-ad-page-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.post-ad-form-card {
+  padding: 25px 30px;
+}
+
+.post-ad-form-card .card-title {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.amenities-checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
+  margin-bottom: 1rem; /* Add some space below the group */
+}
+
+.amenity-checkbox-item {
+  display: flex;
+  align-items: center;
+}
+
+.amenity-checkbox-item input[type="checkbox"] {
+  margin-right: 8px;
+  width: auto; /* Override any global input width */
+  flex-shrink: 0; /* Prevent checkbox from shrinking */
+}
+
+.amenity-checkbox-item label {
+  margin-bottom: 0;
+  font-weight: normal;
+  flex-grow: 1; /* Allow label to take available space */
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: cover;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}

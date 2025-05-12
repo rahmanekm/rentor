@@ -1,0 +1,279 @@
+body {
+  margin: 0; /* Often good to reset body margin */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /* Improves font rendering on Mac */
+  -moz-osx-font-smoothing: grayscale; /* Improves font rendering on Mac/Firefox */
+  color: #333; /* Default text color for the app */
+  background-color: #f8f9fa; /* A light grey background */
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%; /* Use min-height to allow content to expand beyond viewport if necessary */
+  /* text-align: center; */ /* Centering text globally here might not be desired for all components */
+}
+
+.main-content-area-spareroom {
+  flex-grow: 1; /* Allows this area to take up available space between Navbar and Footer */
+  /* The padding is currently set inline in App.jsx, can be moved here: */
+  /* padding: 20px; */
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Spareroom-like Navbar */
+.navbar-spareroom {
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0 20px;
+  height: 70px; /* Standard height */
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.navbar-container-spareroom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; 
+  max-width: 1200px; /* Re-added for centering the content block */
+  margin: 0 auto; /* Re-added for centering the content block */
+}
+
+.navbar-logo-spareroom {
+  color: #ff5a5f; /* Spareroom's primary brand color */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  align-items: flex-end; /* Changed from center to flex-end */
+}
+
+.navbar-logo-image-spareroom {
+  height: 50px; /* Increased height to 50px */
+  width: auto;   /* Maintain aspect ratio */
+  display: block;
+  margin-right: 8px; /* Add some space between logo image and text */
+}
+
+.navbar-logo-text-spareroom {
+  font-size: 1.8rem; /* Same as original logo text size */
+  font-weight: bold;
+  color: #ff5a5f; /* Spareroom's primary brand color */
+  line-height: 1; /* Ensure text aligns well with image */
+}
+
+.navbar-links-spareroom {
+  display: flex; /* Shown on desktop */
+}
+
+.nav-menu-spareroom {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.nav-item-spareroom {
+  margin-left: 25px;
+}
+
+/* Hide mobile-only action links by default (desktop view) */
+.nav-menu-spareroom .mobile-only-action-links {
+  display: none;
+}
+
+.nav-link-spareroom {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem; /* Standard font size */
+  padding: 8px 0;
+  transition: color 0.2s ease-in-out;
+}
+
+.nav-link-spareroom:hover {
+  color: #ff5a5f; /* Hover color */
+}
+
+.navbar-actions-spareroom {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button-spareroom {
+  padding: 8px 18px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  margin-left: 15px;
+}
+
+.post-ad-button-spareroom {
+  background-color: #ff5a5f;
+  color: white;
+  border: 1px solid #ff5a5f;
+}
+
+.post-ad-button-spareroom:hover {
+  background-color: #e0484c;
+  border-color: #e0484c;
+}
+
+.login-button-style {
+  background-color: transparent;
+  color: #ff5a5f; /* Primary brand color for text */
+  border: 1px solid #ff5a5f; /* Primary brand color for border */
+}
+
+.login-button-style:hover {
+  background-color: #ff5a5f; /* Fill with primary brand color on hover */
+  color: white;
+}
+
+.logout-button-style {
+  background-color: transparent;
+  color: #6c757d; /* A muted grey color */
+  border: 1px solid #ced4da; /* Light grey border */
+}
+
+.logout-button-style:hover {
+  background-color: #f8f9fa; /* Very light grey background on hover */
+  color: #333;
+  border-color: #adb5bd;
+}
+
+.action-link-spareroom {
+  margin-left: 20px;
+  font-size: 0.95rem;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle-spareroom {
+  display: none; /* Hidden on desktop */
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments for Navbar */
+@media (max-width: 992px) { /* Tablet and below */
+  .mobile-menu-toggle-spareroom {
+    display: block; /* Show hamburger */
+    order: 3; /* Ensure it's typically on the right */
+  }
+
+  .navbar-links-spareroom {
+    display: none; /* Hide by default on mobile/tablet */
+    position: absolute;
+    top: 70px; /* Below navbar */
+    left: 0;
+    width: 100%;
+    background-color: #fff; /* White background for dropdown */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999; /* Below navbar, but above content */
+    padding: 10px 0;
+  }
+
+  .navbar-links-spareroom.active {
+    display: block; /* Show when mobile menu is open */
+  }
+
+  .nav-menu-spareroom {
+    flex-direction: column; /* Stack links vertically */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .nav-item-spareroom {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .nav-link-spareroom {
+    display: block; /* Make links take full width */
+    padding: 12px 20px; /* Add padding for easier tapping */
+    border-bottom: 1px solid #f0f0f0; /* Separator for links */
+  }
+  .nav-link-spareroom:hover {
+    background-color: #f9f9f9;
+  }
+  
+  .nav-item-spareroom:last-child .nav-link-spareroom {
+    border-bottom: none;
+  }
+
+  .navbar-actions-spareroom.desktop-only {
+    display: none; /* Hide desktop action links */
+  }
+  
+  .mobile-only-action-links {
+    display: block; /* Will be part of .nav-menu-spareroom which is column */
+  }
+  .mobile-only-action-links .nav-link-spareroom {
+    font-weight: 500; /* Make them slightly more prominent if needed */
+  }
+
+  .navbar-container-spareroom {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile-specific if needed, 992px covers most tablet/mobile nav changes */
+  .navbar-logo-spareroom {
+    font-size: 1.5rem; /* Smaller logo for mobile */
+  }
+}
+
+/* Utility class to be added in JS for mobile-only links if not already there */
+/* We are adding these directly in the mobile menu in App.js for simplicity */
+.mobile-only-action-links {
+    /* CSS specific to these if they were outside the main nav-menu but inside navbar-links-spareroom.active */
+}
+
+/* Ensure main content area has some padding if Navbar is sticky */
+.main-content-area-spareroom {
+  /* padding-top: 70px; If navbar is fixed/sticky and content is directly under it */
+  /* The current App.jsx adds inline padding, which is fine for now */
+}

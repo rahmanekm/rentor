@@ -1,0 +1,138 @@
+.footer-spareroom {
+  background-color: #333;
+  color: #ccc;
+  padding: 50px 20px 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+.footer-container-spareroom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  gap: 20px;
+}
+
+.footer-column-spareroom {
+  flex: 1 1 200px;
+  min-width: 180px;
+  margin-bottom: 20px;
+}
+
+.footer-column-spareroom h4 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-column-spareroom ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column-spareroom ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column-spareroom ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-column-spareroom ul li a:hover {
+  color: #ff5a5f;
+  text-decoration: underline;
+}
+
+.social-links-spareroom a {
+  margin-right: 15px;
+  color: #ccc;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.social-links-spareroom .social-icon-svg {
+  width: 24px;
+  height: 24px;
+  fill: #ccc;
+  stroke: #ccc; 
+  transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
+}
+
+.social-links-spareroom a:hover .social-icon-svg {
+  fill: #ff5a5f;
+  stroke: #ff5a5f;
+}
+
+.social-links-spareroom a:hover svg[stroke="currentColor"] {
+    stroke: #ff5a5f;
+}
+.social-links-spareroom a:hover svg[fill="currentColor"] {
+    fill: #ff5a5f;
+}
+
+.app-stores-spareroom {
+  margin-top: 20px;
+}
+
+.app-store-button-spareroom {
+  display: flex;
+  align-items: center;
+  background-color: #4A4A4A;
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out;
+  min-width: 200px;
+  justify-content: center;
+}
+
+.app-store-button-spareroom:hover {
+  background-color: #5A5A5A;
+}
+
+.app-store-icon-spareroom {
+  margin-right: 10px;
+  stroke: white;
+  fill: white; 
+}
+
+.app-store-button-spareroom svg {
+    vertical-align: middle;
+}
+
+.footer-bottom-spareroom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #444;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.footer-bottom-spareroom p {
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .footer-container-spareroom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer-column-spareroom {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .footer-social-spareroom .social-links-spareroom {
+    justify-content: center;
+    display: flex;
+  }
+}

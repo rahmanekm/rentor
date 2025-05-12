@@ -1,0 +1,36 @@
+.profile-page-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.profile-form-card {
+  padding: 25px 30px; /* More padding inside card */
+}
+
+.profile-form-card .card-title {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 0.3rem; /* Tighter spacing for label */
+}
+
+.form-group small.form-text {
+  font-size: 0.8rem;
+}
+
+.budget-inputs {
+  display: flex;
+  gap: 15px;
+}
+
+.budget-inputs .form-group {
+  flex: 1;
+}
+
+.checkbox-group label {
+  margin-bottom: 0; /* Align with checkbox */
+  margin-left: 0.5rem;
+  font-weight: normal; /* Normal weight for checkbox label */
+}

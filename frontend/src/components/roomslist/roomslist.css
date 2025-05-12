@@ -1,0 +1,263 @@
+/* Overall Page Container for Room Listings */
+.page-container-spareroom {
+  padding: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: #f8f9fa; /* Light background for the page */
+}
+
+/* Filter and Sort Bar Styling */
+.filter-sort-bar-spareroom {
+  background-color: #fff;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.filter-group-spareroom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1; /* Allow filter group to take more space */
+}
+
+.filter-group-spareroom select,
+.filter-input-spareroom {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  min-width: 150px; /* Minimum width for selects */
+  background-color: #fff;
+}
+
+.filter-input-spareroom {
+  flex-grow: 1; /* Allow date input to take available space */
+}
+
+.more-filters-button-spareroom {
+  padding: 10px 15px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.more-filters-button-spareroom:hover {
+  background-color: #e0e0e0;
+}
+
+.sort-group-spareroom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sort-group-spareroom label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.sort-group-spareroom select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  background-color: #fff;
+}
+
+/* Responsive adjustments for filter/sort bar */
+@media (max-width: 768px) {
+  .filter-sort-bar-spareroom {
+    flex-direction: column;
+    align-items: stretch; /* Make groups take full width */
+  }
+  .filter-group-spareroom {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .filter-group-spareroom select,
+  .filter-input-spareroom,
+  .more-filters-button-spareroom {
+    width: 100%; /* Full width for controls on mobile */
+    margin-bottom: 10px; /* Add some space between stacked controls */
+  }
+  .sort-group-spareroom {
+    justify-content: flex-end; /* Align sort to the right on mobile if desired, or center */
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
+/* Main Grid for Room Cards */
+.RoomsList-spareroom {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Slightly wider cards */
+  gap: 25px;
+}
+
+/* Individual Room Card Styling */
+.room-card-spareroom {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.room-card-spareroom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.room-thumbnail-spareroom {
+  width: 100%;
+  height: 220px; /* Slightly taller image */
+  background-size: cover;
+  background-position: center;
+  position: relative; /* For price overlay */
+}
+
+.room-price-spareroom {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0,0,0,0.75); /* Semi-transparent background */
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.room-details-spareroom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Allows button to stick to bottom if cards have varying text height */
+}
+
+.room-name-spareroom {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px 0;
+}
+
+.room-location-spareroom {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.room-type-spareroom {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 10px;
+}
+
+.room-availability-spareroom {
+  font-size: 0.9rem;
+  color: #28a745; /* Green for availability */
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.room-amenities-spareroom {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.amenity-icon {
+  background-color: #f0f0f0;
+  padding: 6px 10px; /* Adjusted padding slightly for SVGs */
+  border-radius: 15px; /* Pill shape */
+  font-size: 0.8rem; /* Keep for potential text, but SVG size is fixed */
+  color: #555; /* This color will be inherited by SVG's currentColor */
+  display: inline-flex; /* Use inline-flex for alignment */
+  align-items: center;
+  justify-content: center;
+  gap: 5px; /* If we ever add text next to the icon inside this span */
+}
+
+.amenity-icon svg {
+  /* The SVGs are defined with width/height 16. If more control is needed: */
+  /* width: 16px; */
+  /* height: 16px; */
+  display: block; /* Removes any extra space below inline SVGs */
+}
+
+.room-description-snippet-spareroom p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1; /* Allows this to take available space if needed */
+}
+
+.advertiser-info-spareroom {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: auto; /* Pushes advertiser info and button towards bottom if content is short */
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.advertiser-avatar-spareroom, 
+.advertiser-avatar-placeholder-spareroom {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover; /* For actual images */
+  background-color: #e0e0e0; /* For placeholder */
+}
+
+.advertiser-name-spareroom {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.view-details-button-spareroom {
+  display: block;
+  background-color: #ff5a5f; /* Spareroom brand color */
+  color: white;
+  text-align: center;
+  padding: 12px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.view-details-button-spareroom:hover {
+  background-color: #e0484c;
+}
+
+.loading-message-spareroom,
+.error-message-spareroom,
+.no-rooms-found-spareroom {
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 40px 20px;
+  color: #555;
+}
+
+.error-message-spareroom {
+  color: #dc3545; /* Bootstrap danger color */
+}

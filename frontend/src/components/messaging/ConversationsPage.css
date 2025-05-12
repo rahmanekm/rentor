@@ -1,0 +1,79 @@
+.conversations-page-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.conversations-page-container h1 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.conversation-list-item {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  background-color: #fff;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  text-decoration: none;
+  color: inherit; /* Inherit text color for the link wrapper */
+}
+
+.conversation-list-item:hover {
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-decoration: none; /* Ensure no underline on hover for the link wrapper */
+}
+
+.conversation-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+  object-fit: cover;
+}
+
+.conversation-details {
+  flex-grow: 1;
+}
+
+.conversation-partner-name {
+  font-weight: bold;
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.conversation-last-message {
+  color: #6c757d;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 300px; /* Adjust as needed */
+}
+
+.conversation-meta {
+  text-align: right;
+  min-width: 120px; /* Ensure enough space for time and badge */
+}
+
+.conversation-time {
+  font-size: 0.8rem;
+  color: #adb5bd;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.unread-badge {
+  font-size: 0.75rem;
+  padding: 0.3em 0.6em;
+}
+
+.no-conversations-message {
+  text-align: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}

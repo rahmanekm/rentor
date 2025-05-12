@@ -1,0 +1,514 @@
+/* General Body & Typography (assuming a global CSS might handle some of this) */
+.home-spareroom {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Example font stack */
+  color: #333;
+  line-height: 1.6;
+}
+
+.section-padding-spareroom {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.bg-lightgrey-spareroom {
+  background-color: #f9f9f9;
+}
+
+/* Hero Section */
+.hero-section-spareroom {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  transition: background-image 1s ease-in-out; /* Add transition for background image */
+}
+
+.hero-overlay-spareroom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+}
+
+.hero-content-spareroom {
+  position: relative; /* To be above the overlay */
+  z-index: 1;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content-spareroom h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero-content-spareroom p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Search Box */
+.search-box-spareroom {
+  background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent white */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.search-type-selector {
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+.search-type-selector button {
+  flex-grow: 1;
+  padding: 12px 10px;
+  background-color: #f0f0f0;
+  border: none;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: #555;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.search-type-selector button:not(:last-child) {
+  border-right: 1px solid #ddd;
+}
+
+.search-type-selector button.active {
+  background-color: #813afe; /* Primary color */
+  color: white;
+  font-weight: 600;
+}
+
+.search-type-selector button:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+.search-form-spareroom .location-input-spareroom {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.search-filters-spareroom {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.search-filters-spareroom input,
+.search-filters-spareroom select {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.search-button-spareroom {
+  width: 100%;
+  padding: 15px;
+  background-color: #ff5a5f; /* Spareroom-like accent color */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-button-spareroom:hover {
+  background-color: #e0484c;
+}
+
+.advanced-search-spareroom {
+  margin-top: 15px;
+  font-size: 0.9rem;
+}
+
+.advanced-search-spareroom a {
+  color: #813afe;
+  text-decoration: none;
+}
+
+.advanced-search-spareroom a:hover {
+  text-decoration: underline;
+}
+
+/* How it Works Section */
+.how-it-works-spareroom h2,
+.popular-locations-spareroom h2,
+.testimonials-section-spareroom h2,
+.post-ad-cta-spareroom h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.steps-spareroom {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.step-spareroom {
+  flex-basis: calc(33.333% - 30px);
+  max-width: 300px;
+  text-align: center;
+}
+
+.step-icon-spareroom {
+  color: #813afe; /* This will be inherited by SVG's stroke/fill if they are set to 'currentColor' */
+  margin-bottom: 15px;
+  background-color: #e9e1f6;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin: 0 auto 15px auto;
+  display: flex; /* Use flexbox for centering */
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+}
+
+.step-icon-spareroom svg {
+  width: 32px; /* Control the size of the SVG icon itself if not set on SVG */
+  height: 32px;
+}
+
+.step-spareroom h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.step-spareroom p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Popular Locations Section */
+.locations-grid-spareroom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.location-card-spareroom {
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.location-card-spareroom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.location-card-spareroom img {
+  width: 100%;
+  height: 180px; /* Adjust as needed */
+  object-fit: cover;
+  display: block;
+}
+
+.location-name-spareroom {
+  padding: 15px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background-color: white;
+  text-align: center;
+}
+
+.view-all-button-spareroom {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #813afe;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.view-all-button-spareroom:hover {
+  background-color: #6a2fd1;
+}
+
+/* Testimonials Section */
+.testimonial-card-spareroom {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+  max-width: 650px;
+  margin: 0 auto 25px auto;
+  text-align: left;
+  border-left: 5px solid #813afe;
+}
+
+.testimonial-card-spareroom p:first-child {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.testimonial-author-spareroom {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  text-align: right;
+}
+
+/* Post Ad CTA Section */
+.post-ad-cta-spareroom p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+
+.post-ad-button-spareroom {
+  display: inline-block;
+  padding: 15px 35px;
+  background-color: #ff5a5f; /* Spareroom-like accent color */
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  transition: background-color 0.3s;
+}
+
+.post-ad-button-spareroom:hover {
+  background-color: #e0484c;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-content-spareroom h1 {
+    font-size: 2.4rem;
+  }
+  .hero-content-spareroom p {
+    font-size: 1.1rem;
+  }
+  .search-box-spareroom {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section-spareroom {
+    height: auto; /* Allow height to adjust to content */
+    padding: 80px 0; /* Add padding for smaller screens */
+  }
+  .hero-content-spareroom h1 {
+    font-size: 2rem;
+  }
+   .search-filters-spareroom {
+    flex-direction: column; /* Stack filters on smaller screens */
+  }
+  .steps-spareroom {
+    flex-direction: column;
+    align-items: center;
+  }
+  .step-spareroom {
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .locations-grid-spareroom {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .section-padding-spareroom {
+    padding: 40px 15px;
+  }
+  .hero-content-spareroom h1 {
+    font-size: 1.8rem;
+  }
+  .hero-content-spareroom p {
+    font-size: 1rem;
+  }
+  .search-type-selector button {
+    font-size: 0.85rem;
+    padding: 10px 5px;
+  }
+  .search-form-spareroom .location-input-spareroom,
+  .search-filters-spareroom input,
+  .search-filters-spareroom select,
+  .search-button-spareroom {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+  .post-ad-button-spareroom,
+  .view-all-button-spareroom {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+}
+
+/* Legacy styles from original file - can be removed or refactored if no longer needed */
+/*
+.home {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.headerContainer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.headerContainer h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.headerContainer p {
+  font-size: 1.5rem;
+  font-weight: normal;
+  color: #34495e;
+  margin-bottom: 40px;
+}
+
+.bannerImage {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.heroSection {
+  width: 100%;
+  padding: 40px 20px;
+  background: #f7f7f7;
+  text-align: center;
+}
+
+.heroSection h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #2c3e50;
+}
+
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  max-width: 900px;
+  margin: 0 auto 40px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.search-form input {
+  padding: 10px;
+  flex: 1 1 250px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-form input:focus {
+  outline: none;
+  border-color: #813afe;
+}
+
+.search-form button {
+  padding: 10px 25px;
+  border: none;
+  background-color: #813afe;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.search-form button:hover {
+  background-color: #6a2fd1;
+}
+
+.testimonialsSection {
+  width: 100%;
+  padding: 60px 20px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonialsSection h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.testimonialCard {
+  max-width: 800px;
+  padding: 30px;
+  border-left: 5px solid #813afe;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.testimonialCard p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+@media (max-width: 768px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+*/

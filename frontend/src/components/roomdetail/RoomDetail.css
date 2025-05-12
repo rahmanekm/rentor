@@ -1,0 +1,95 @@
+.room-detail-page-container {
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.room-detail-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.room-detail-location {
+  font-size: 1.1rem;
+  color: #6c757d; /* Bootstrap secondary color */
+  margin-bottom: 20px;
+}
+
+.room-detail-image {
+  border-radius: 8px;
+  margin-bottom: 30px;
+  max-height: 550px; /* Control max height */
+  object-fit: cover; /* Ensure image covers the area well */
+}
+
+.room-detail-section {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+}
+
+.room-detail-section h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #343a40; /* Bootstrap dark color */
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.room-detail-price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ff5a5f; /* Theme accent color */
+  margin-bottom: 15px;
+}
+
+.room-detail-amenities ul {
+  list-style-type: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.room-detail-amenities li {
+  background-color: #f8f9fa; /* Light background for amenity tags */
+  padding: 8px 12px;
+  border-radius: 20px; /* Pill shape */
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Targeting the SVG element that has the class .amenity-icon-detail */
+svg.amenity-icon-detail {
+  width: 18px; 
+  height: 18px;
+  stroke-width: 2; 
+  stroke: currentColor; /* Inherit color from parent text for stroke */
+  fill: none;           /* Most line icons don't have a fill */
+}
+
+.owner-actions-section {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.owner-actions-section .btn { /* Styling for React-Bootstrap buttons */
+  margin-right: 10px;
+}
+
+.back-to-list-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.back-to-list-link:hover {
+  text-decoration: underline;
+}

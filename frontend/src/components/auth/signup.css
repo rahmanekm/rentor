@@ -1,0 +1,160 @@
+/* Auth Page General Styling - Inherits from login.css if imported globally or App.css */
+/* These styles are largely the same as login.css. Consider a common auth.css if preferred. */
+
+.auth-page-spareroom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px); 
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.auth-form-container-spareroom {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px; 
+  text-align: center;
+}
+
+.auth-icon-spareroom {
+  width: 60px; 
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.auth-form-container-spareroom h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.auth-subheading-spareroom {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.auth-form-spareroom {
+  text-align: left;
+}
+
+.form-group-spareroom {
+  margin-bottom: 20px;
+}
+
+.form-group-spareroom label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.form-input-spareroom {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-input-spareroom:focus {
+  outline: none;
+  border-color: #813afe;
+  box-shadow: 0 0 0 2px rgba(129, 58, 254, 0.2);
+}
+
+.auth-link-spareroom {
+  font-size: 0.85rem;
+  color: #813afe;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.auth-link-spareroom:hover {
+  color: #5a2ab3;
+  text-decoration: underline;
+}
+
+.auth-link-spareroom.bold {
+  font-weight: 600;
+}
+
+.form-button-spareroom {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #ff5a5f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-button-spareroom:hover {
+  background-color: #e0484c;
+}
+
+.auth-switch-spareroom {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Specific to signup */
+.terms-group-spareroom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 20px; /* Added margin like other form-groups */
+}
+
+.terms-group-spareroom input[type="checkbox"] {
+ margin-right: 5px;
+}
+
+.terms-group-spareroom label {
+    margin-bottom: 0; 
+    font-weight: normal;
+    color: #555;
+}
+
+.user-type-group-spareroom {
+  margin-bottom: 20px;
+}
+
+.user-type-group-spareroom legend {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.user-type-options-spareroom {
+  display: flex;
+  gap: 20px; /* Space between radio buttons */
+}
+
+.user-type-options-spareroom label {
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: normal;
+  color: #555;
+  cursor: pointer;
+}
+
+.user-type-options-spareroom input[type="radio"] {
+  margin-right: 8px;
+}

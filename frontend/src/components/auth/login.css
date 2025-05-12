@@ -1,0 +1,131 @@
+/* Auth Page General Styling */
+.auth-page-spareroom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 140px); /* Full viewport height minus navbar and potential footer space */
+  padding: 40px 20px;
+  background-color: #f8f9fa; /* Consistent with body background */
+}
+
+.auth-form-container-spareroom {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px; /* Max width for the form card */
+  text-align: center;
+}
+
+.auth-icon-spareroom {
+  width: 60px; /* Size of the user icon */
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.auth-form-container-spareroom h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.auth-subheading-spareroom {
+  font-size: 0.95rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Form Styling */
+.auth-form-spareroom {
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group-spareroom {
+  margin-bottom: 20px;
+}
+
+.form-group-spareroom label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.form-input-spareroom {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; /* Ensure padding doesn't expand width */
+  transition: border-color 0.2s ease-in-out;
+}
+
+.form-input-spareroom:focus {
+  outline: none;
+  border-color: #813afe; /* Primary theme color for focus */
+  box-shadow: 0 0 0 2px rgba(129, 58, 254, 0.2);
+}
+
+.form-options-spareroom {
+  display: flex;
+  justify-content: flex-end; /* Align forgot password to the right */
+  margin-bottom: 20px;
+}
+
+.auth-link-spareroom {
+  font-size: 0.85rem;
+  color: #813afe;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.auth-link-spareroom:hover {
+  color: #5a2ab3;
+  text-decoration: underline;
+}
+
+.auth-link-spareroom.bold {
+  font-weight: 600;
+}
+
+.form-button-spareroom {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #ff5a5f; /* Spareroom brand color */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.form-button-spareroom:hover {
+  background-color: #e0484c;
+}
+
+.auth-switch-spareroom {
+  margin-top: 25px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Legacy styles from original file (Bootstrap overrides) - can be removed */
+/*
+.btn-primary {
+    color: #fff;
+    background-color: #813afe !important;
+    border-color: #813afe !important;
+}
+
+.icon-img{
+    width: 70px;
+    height: 70px;
+    margin-bottom: 2rem;
+}
+*/
