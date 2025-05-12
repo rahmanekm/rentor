@@ -10,8 +10,18 @@ import HeroBg2 from "../../assets/images/hero-background_1.jpg";
 import HeroBg3 from "../../assets/images/hero-background_2.jpg";
 import HeroBg4 from "../../assets/images/hero-background_3.jpg";
 
-// Only import the single fallback image for locations
-import LondonLocationImage from "../../assets/images/london-unsplash.jpg"; 
+// Location Images
+import ShoreditchImage from "../../assets/images/shoreditch_location.jpg";
+import CanaryWharfImage from "../../assets/images/canary_wharf_location.jpg";
+import StratfordImage from "../../assets/images/stratford_location.jpg";
+import HackneyImage from "../../assets/images/hackney_location.jpg";
+import BethnalGreenImage from "../../assets/images/bethnal_green_location.jpg";
+import WhitechapelImage from "../../assets/images/whitechapel_location.jpg";
+import IlfordImage from "../../assets/images/ilford_location.jpg";
+import NewburyParkImage from "../../assets/images/newbury_park_location.jpg";
+import RomfordImage from "../../assets/images/romford_location.jpg";
+import BarkingImage from "../../assets/images/barking_location.jpg";
+// import LondonLocationImage from "../../assets/images/london-unsplash.jpg"; // Keep original for reference if needed, but commented out
 
 import "./home.css";
 
@@ -148,43 +158,43 @@ const Home = () => {
                 <h2>Explore East London Hotspots</h2>
                 <div className="locations-grid-spareroom">
                     <Link to="/rooms?city=London&address=Shoreditch" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Shoreditch, East London" /> 
+                        <img src={ShoreditchImage} alt="Shoreditch, East London" /> 
                         <div className="location-name-spareroom">Shoreditch</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Canary+Wharf" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Canary Wharf, East London" />
+                        <img src={CanaryWharfImage} alt="Canary Wharf, East London" />
                         <div className="location-name-spareroom">Canary Wharf</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Stratford" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Stratford, East London" />
+                        <img src={StratfordImage} alt="Stratford, East London" />
                         <div className="location-name-spareroom">Stratford</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Hackney" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Hackney, East London" />
+                        <img src={HackneyImage} alt="Hackney, East London" />
                         <div className="location-name-spareroom">Hackney</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Bethnal+Green" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Bethnal Green, East London" />
+                        <img src={BethnalGreenImage} alt="Bethnal Green, East London" />
                         <div className="location-name-spareroom">Bethnal Green</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Whitechapel" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Whitechapel, East London" />
+                        <img src={WhitechapelImage} alt="Whitechapel, East London" />
                         <div className="location-name-spareroom">Whitechapel</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Ilford" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Ilford, East London/Essex" />
+                        <img src={IlfordImage} alt="Ilford, East London/Essex" />
                         <div className="location-name-spareroom">Ilford</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Newbury+Park" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Newbury Park, East London/Essex" />
+                        <img src={NewburyParkImage} alt="Newbury Park, East London/Essex" />
                         <div className="location-name-spareroom">Newbury Park</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Romford" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Romford, Greater London" />
+                        <img src={RomfordImage} alt="Romford, Greater London" />
                         <div className="location-name-spareroom">Romford</div>
                     </Link>
                     <Link to="/rooms?city=London&address=Barking" className="location-card-spareroom">
-                        <img src={LondonLocationImage} alt="Barking, East London" />
+                        <img src={BarkingImage} alt="Barking, East London" />
                         <div className="location-name-spareroom">Barking</div>
                     </Link>
                 </div>
