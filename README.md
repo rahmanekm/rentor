@@ -57,23 +57,69 @@ This is a full-stack web application designed to facilitate room rentals, allowi
 
 -   Node.js (v16 or later recommended)
 -   npm (or yarn)
--   MySQL Server
+-   MySQL Server (See Step 1 below for installation notes)
 
 ### 1. Database Setup
 
-1.  Ensure your MySQL server is running.
-2.  Create a database (e.g., `room_rental_db`).
-3.  Connect to your MySQL server using a client (e.g., MySQL Workbench, `mysql` CLI).
-4.  Execute the `database/schema.sql` script to create the tables.
-    ```sql
-    -- Example using mysql CLI:
-    -- mysql -u your_mysql_user -p your_database_name < database/schema.sql
+**Step 1: Install MySQL Server (if not already installed)**
+
+*   If you don't have MySQL Server installed on your system, you'll need to install it first.
+*   **Windows & macOS:** Download the MySQL Community Server installer from the official website: [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
+*   **Linux (Ubuntu/Debian):** You can typically install it using the package manager:
+    ```bash
+    sudo apt update
+    sudo apt install mysql-server
     ```
-5.  (Optional) Execute the `database/sample_data.sql` script to populate the tables with sample data.
-    ```sql
-    -- Example using mysql CLI:
-    -- mysql -u your_mysql_user -p your_database_name < database/sample_data.sql
+*   **Linux (Fedora/CentOS/RHEL):**
+    ```bash
+    sudo dnf install mysql-community-server 
+    # or sudo yum install mysql-community-server
     ```
+*   After installation, ensure the MySQL service is started and running. You might also want to run `mysql_secure_installation` (on Linux) to set a root password and secure your installation.
+
+**Step 2: Create the Database**
+
+1.  Connect to your MySQL server as a user with privileges to create databases (e.g., the `root` user or another admin user). You can use a command-line client or a GUI tool like MySQL Workbench or DBeaver.
+    *   Using the `mysql` command-line client:
+        ```bash
+        mysql -u root -p
+        ```
+        (Enter your MySQL root password when prompted.)
+
+2.  Once connected, create the database. We'll use `room_rental_db` as the example name (you can change this, but remember to update your `.env` file for the backend).
+    ```sql
+    CREATE DATABASE room_rental_db;
+    ```
+3.  (Optional but Recommended) Create a dedicated MySQL user for this application and grant it privileges on the `room_rental_db` database. Replace `your_app_user` and `your_strong_password` with your desired credentials.
+    ```sql
+    CREATE USER 'your_app_user'@'localhost' IDENTIFIED BY 'your_strong_password';
+    GRANT ALL PRIVILEGES ON room_rental_db.* TO 'your_app_user'@'localhost';
+    FLUSH PRIVILEGES;
+    ```
+4.  Exit the MySQL client if you used the command line:
+    ```sql
+    EXIT;
+    ```
+
+**Step 3: Create Database Schema (Tables)**
+
+1.  Navigate to the root directory of this project in your terminal if you're not already there.
+2.  Use the MySQL command-line client to execute the `database/schema.sql` script. This script contains the `CREATE TABLE` statements.
+    *   Replace `your_app_user` with the user you created (or `root` if you skipped that step) and `room_rental_db` with your database name.
+    ```bash
+    mysql -u your_app_user -p room_rental_db < database/schema.sql
+    ```
+    (Enter the password for `your_app_user` when prompted.)
+
+**Step 4: (Optional) Populate with Sample Data**
+
+1.  If you want to add some initial sample data for testing, execute the `database/sample_data.sql` script:
+    ```bash
+    mysql -u your_app_user -p room_rental_db < database/sample_data.sql
+    ```
+    (Enter the password for `your_app_user` when prompted.)
+
+Your database should now be set up and ready for the backend application to connect. Remember to configure the backend's `.env` file with the correct database name, user, and password.
 
 ### 2. Backend Setup
 
