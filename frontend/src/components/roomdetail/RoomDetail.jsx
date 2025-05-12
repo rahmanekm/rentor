@@ -62,8 +62,8 @@ const RoomDetail = () => {
 
   const handleContactLandlord = () => {
     if (!isAuthenticated) {
-      toast.error("Please log in to contact the landlord.");
-      navigate('/login', { state: { from: location } });
+      toast.error("Please sign up or log in to contact the landlord.");
+      navigate('/signup', { state: { from: location } }); // Redirect to signup page
       return;
     }
     if (room && room.LandlordID) {
