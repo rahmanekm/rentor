@@ -53,6 +53,19 @@ import BlogPostDetailPage from './components/blog/BlogPostDetailPage';
 import ManageMyAdsPage from './components/manageads/ManageMyAdsPage';
 import ConversationsPage from './components/messaging/ConversationsPage'; // Import ConversationsPage
 import ChatPage from './components/messaging/ChatPage'; // Import ChatPage
+import Pricing from './components/pricing/Pricing'; // Import Pricing component
+import AboutUs from './components/aboutus/AboutUs'; // Import AboutUs component
+import ContactUs from './components/contactus/ContactUs'; // Import ContactUs component
+import FAQs from './components/faq/FAQs'; // Import FAQs component
+import SafetyAdvice from './components/safetyadvice/SafetyAdvice'; // Import SafetyAdvice component
+import Careers from './components/careers/Careers'; // Import Careers component
+import Press from './components/press/Press'; // Import Press component
+import Terms from './components/terms/Terms'; // Import Terms component
+import Privacy from './components/privacy/Privacy'; // Import Privacy component
+import AdvertiserTips from './components/advertisertips/AdvertiserTips'; // Import AdvertiserTips component
+import Sitemap from './components/sitemap/Sitemap';
+import News from './components/news/News';
+import Accessibility from './components/accessibility/Accessibility';
 
 // General Page Placeholders
 // const Login = () => <div>Login Page. Content to be integrated.</div>; // Replaced by real component
@@ -146,7 +159,20 @@ function App() {
             <Route 
               path="/rooms/:id/edit" 
               element={<ProtectedRoute allowedUserTypes={['Landlord']}><EditRoom /></ProtectedRoute>}
-            />
+            />            
+            <Route path="/pricing" element={<Pricing />} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+            <Route path="/faq" element={<FAQs />} />
+            <Route path="/safety" element={<SafetyAdvice />} />
+            <Route path="/careers" element={<Careers />} />
+            <Route path="/press" element={<Press />} />
+            <Route path="/terms-conditions" element={<Terms />} />
+            <Route path="/privacy-policy" element={<Privacy />} />
+            <Route path="/advertiser-tips" element={<AdvertiserTips />} />
+            <Route path="/sitemap" element={<Sitemap />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/accessibility" element={<Accessibility />} />
             <Route path="*" element={<NotFound />} /> {/* Catch-all for 404 */}
           </Routes>
         </main>

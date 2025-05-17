@@ -1,0 +1,53 @@
+.sitemap-container {
+  padding: 60px 0;
+}
+
+.sitemap-container h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.sitemap-intro {
+  text-align: center;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.sitemap-content {
+  margin-top: 2rem;
+}
+
+.sitemap-section {
+  margin-bottom: 2.5rem;
+}
+
+.sitemap-section h2 {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  text-align: center;
+}
+
+.sitemap-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sitemap-section ul li {
+  margin-bottom: 0.8rem;
+}
+
+.sitemap-section ul li a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sitemap-section ul li a:hover {
+  color: #ff5a5f;
+  text-decoration: none;
+}

@@ -6,11 +6,12 @@ const router = express.Router();
 
 const JWT_SECRET = process.env.JWT_SECRET;
 
+
 // User Registration
 router.post('/register', async (req, res) => {
-  const { Name, Email, Password, PhoneNumber, UserType, ProfilePictureURL, Bio, PropertyName, PropertyAddress } = req.body;
+  const { Name, Email, Password, PhoneNumber, UserType, ProfilePictureURL, Bio, PropertyName, PropertyAddress } = req.body; // Removed Plan from destructuring
 
-  if (!Name || !Email || !Password || !UserType) {
+  if (!Name || !Email || !Password || !UserType) { // Removed Plan from required check
     return res.status(400).json({ message: 'Name, Email, Password, and UserType are required.' });
   }
 
@@ -32,6 +33,7 @@ router.post('/register', async (req, res) => {
       PhoneNumber,
       UserType,
       ProfilePictureURL,
+      Plan: 'Free', // Assign Free plan by default
       Bio: UserType === 'Tenant' ? Bio : null,
       PropertyName: UserType === 'Landlord' ? PropertyName : null,
       PropertyAddress: UserType === 'Landlord' ? PropertyAddress : null,

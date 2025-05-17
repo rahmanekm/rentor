@@ -34,7 +34,7 @@ const Login = () => {
             
             toast.dismiss(loadingToastId);
             toast.success(response.data.message || 'Login successful!'); 
-            navigate("/"); 
+            navigate("/pricing"); // Redirect to pricing page after login
 
         } catch (err) {
             toast.dismiss(loadingToastId);

@@ -1,30 +1,28 @@
 .footer-spareroom {
-  background-color: #333;
-  color: #ccc;
-  padding: 50px 20px 20px;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 0.9rem;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 60px 0 20px;
+  margin-top: auto;
 }
 
 .footer-container-spareroom {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   max-width: 1200px;
-  margin: 0 auto 30px auto;
-  gap: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
 }
 
 .footer-column-spareroom {
   flex: 1 1 200px;
   min-width: 180px;
-  margin-bottom: 20px;
 }
 
 .footer-column-spareroom h4 {
-  color: #fff;
+  color: #ffffff;
   font-size: 1.1rem;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-weight: 600;
 }
 
@@ -35,104 +33,111 @@
 }
 
 .footer-column-spareroom ul li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .footer-column-spareroom ul li a {
-  color: #ccc;
+  color: #b3b3b3;
   text-decoration: none;
-  transition: color 0.2s ease-in-out;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
 
 .footer-column-spareroom ul li a:hover {
-  color: #ff5a5f;
-  text-decoration: underline;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social-links-spareroom {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
 }
 
 .social-links-spareroom a {
-  margin-right: 15px;
-  color: #ccc;
-  text-decoration: none;
-  display: inline-block;
+  color: #b3b3b3;
+  transition: color 0.2s ease;
 }
 
-.social-links-spareroom .social-icon-svg {
+.social-links-spareroom a:hover {
+  color: #ffffff;
+}
+
+.social-icon-svg {
   width: 24px;
   height: 24px;
-  fill: #ccc;
-  stroke: #ccc; 
-  transition: fill 0.2s ease-in-out, stroke 0.2s ease-in-out;
-}
-
-.social-links-spareroom a:hover .social-icon-svg {
-  fill: #ff5a5f;
-  stroke: #ff5a5f;
-}
-
-.social-links-spareroom a:hover svg[stroke="currentColor"] {
-    stroke: #ff5a5f;
-}
-.social-links-spareroom a:hover svg[fill="currentColor"] {
-    fill: #ff5a5f;
 }
 
 .app-stores-spareroom {
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .app-store-button-spareroom {
   display: flex;
   align-items: center;
-  background-color: #4A4A4A;
-  color: white;
-  padding: 10px 15px;
-  margin-bottom: 10px;
-  border-radius: 5px;
+  gap: 8px;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 6px;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: background-color 0.2s ease-in-out;
-  min-width: 200px;
-  justify-content: center;
+  transition: background-color 0.2s ease;
 }
 
 .app-store-button-spareroom:hover {
-  background-color: #5A5A5A;
+  background-color: #404040;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .app-store-icon-spareroom {
-  margin-right: 10px;
-  stroke: white;
-  fill: white; 
-}
-
-.app-store-button-spareroom svg {
-    vertical-align: middle;
+  width: 24px;
+  height: 24px;
 }
 
 .footer-bottom-spareroom {
   text-align: center;
+  margin-top: 40px;
   padding-top: 20px;
-  border-top: 1px solid #444;
-  font-size: 0.85rem;
-  color: #aaa;
+  border-top: 1px solid #333333;
 }
 
 .footer-bottom-spareroom p {
-  margin: 5px 0;
+  color: #b3b3b3;
+  font-size: 0.9rem;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
   .footer-container-spareroom {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .footer-column-spareroom.footer-social-spareroom {
+    grid-column: span 2;
+  }
+
+  .app-stores-spareroom {
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-container-spareroom {
+    grid-template-columns: 1fr;
     text-align: center;
   }
-  .footer-column-spareroom {
-    flex-basis: 100%;
-    margin-bottom: 30px;
+
+  .footer-column-spareroom.footer-social-spareroom {
+    grid-column: span 1;
   }
-  .footer-social-spareroom .social-links-spareroom {
+
+  .social-links-spareroom {
     justify-content: center;
-    display: flex;
   }
 }

@@ -1,8 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 import './footer.css';
 
 const Footer = () => {
+  const { isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+
   const FacebookIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" className="social-icon-svg">
       <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
@@ -24,21 +28,23 @@ const Footer = () => {
   return (
     <footer className="footer-spareroom">
       <div className="footer-container-spareroom">
-        <div className="footer-column-spareroom">
-          <h4>RoomRentor</h4>
+        <div className="footer-column-spareroom">          <h4>Room Rentor</h4>
           <ul>
             <li><Link to="/about-us">About Us</Link></li>
             <li><Link to="/careers">Careers</Link></li>
             <li><Link to="/press">Press</Link></li>
             <li><Link to="/blog">Blog</Link></li>
+            <li><Link to="/rooms">Find a Room</Link></li>
+            <li><Link to="/flatmates">Find Flatmates</Link></li>
           </ul>
         </div>
         <div className="footer-column-spareroom">
-          <h4>Help & Info</h4>
+          <h4>Help & Support</h4>
           <ul>
             <li><Link to="/contact-us">Contact Us</Link></li>
             <li><Link to="/faq">FAQs</Link></li>
-            <li><Link to="/safety">Safety Advice</Link></li>
+            <li><Link to="/safety">Safety Guide</Link></li>
+            <li><Link to="/advice">Renting Advice</Link></li>
             <li><Link to="/terms-conditions">Terms & Conditions</Link></li>
             <li><Link to="/privacy-policy">Privacy Policy</Link></li>
           </ul>
@@ -46,15 +52,34 @@ const Footer = () => {
         <div className="footer-column-spareroom">
           <h4>For Advertisers</h4>
           <ul>
-            <li><Link to="/post-ad-info">Post an Ad</Link></li>
-            <li><Link to="/advertiser-tips">Advertiser Tips</Link></li>
-            <li><Link to="/pricing">Pricing</Link></li>
+            <li
+              onClick={() => {
+                if (isAuthenticated) {
+                  navigate('/post-ad');
+                } else {
+                  navigate('/register');
+                }
+              }}
+              style={{ cursor: 'pointer' }} // Add a pointer cursor to indicate it's clickable
+            >
+              Post an Ad
+            </li>
+            <li><Link to="/advertiser-tips">Tips for Success</Link></li>
+            <li><Link to="/pricing">Pricing Plans</Link></li>
+          </ul>
+        </div>
+        <div className="footer-column-spareroom">
+          <h4>Resources</h4>
+          <ul>
+            <li><Link to="/news">Latest News</Link></li>
+            <li><Link to="/privacy-policy">Privacy Policy</Link></li>
+            <li><Link to="/sitemap">Sitemap</Link></li>
+            <li><Link to="/accessibility">Accessibility</Link></li>
           </ul>
         </div>
         <div className="footer-column-spareroom footer-social-spareroom">
-          <h4>Follow Us</h4>
+          <h4>Connect With Us</h4>
           <div className="social-links-spareroom">
-            {/* Using placeholder links for social media */}
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><FacebookIcon /></a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><TwitterIcon /></a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><InstagramIcon /></a>

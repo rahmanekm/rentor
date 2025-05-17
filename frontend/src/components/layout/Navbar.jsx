@@ -64,11 +64,10 @@ const Navbar = () => {
             <li className="nav-item-spareroom">
               <Link to="/flatmates" className="nav-link-spareroom" onClick={toggleMobileMenu}>Flatmates</Link>
             </li>
-            {!isAuthenticated && (
+            <li className="nav-item-spareroom">
+              <Link to="/pricing" className="nav-link-spareroom" onClick={toggleMobileMenu}>Pricing</Link>
+            </li>            {!isAuthenticated && (
               <>
-                <li className="nav-item-spareroom">
-                  <Link to="/advice" className="nav-link-spareroom" onClick={toggleMobileMenu}>Advice</Link>
-                </li>
                 <li className="nav-item-spareroom">
                   <Link to="/blog" className="nav-link-spareroom" onClick={toggleMobileMenu}>Blog</Link>
                 </li>

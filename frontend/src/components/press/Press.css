@@ -1,0 +1,183 @@
+.press-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.press-hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #813afe 0%, #6a2fd1 100%);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.press-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.press-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+.press-content {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.press-releases h2,
+.media-kit h2,
+.press-contact h2 {
+  color: #333;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.releases-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.release-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.release-card:hover {
+  transform: translateY(-5px);
+}
+
+.release-date {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.release-card h3 {
+  color: #333;
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.release-card p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #813afe;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.downloads-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.download-card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.download-info h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.download-info p {
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.format {
+  background: #f5f5f5;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.download-button {
+  background: #813afe;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background: #6a2fd1;
+}
+
+.contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+.contact-card h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+.contact-card p {
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-details a {
+  color: #813afe;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-details span {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .press-hero {
+    padding: 40px 20px;
+  }
+
+  .press-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .download-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+}

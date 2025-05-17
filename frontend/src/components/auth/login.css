@@ -24,6 +24,10 @@
   margin-bottom: 20px;
 }
 
+.auth-form-container-spareroom h2, .auth-subheading-spareroom {
+  text-align: center;
+}
+
 .auth-form-container-spareroom h2 {
   font-size: 1.8rem;
   font-weight: 600;

@@ -1,0 +1,98 @@
+.accessibility-container {
+  padding: 60px 0;
+  max-width: 1000px;
+}
+
+.accessibility-container h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.accessibility-intro {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accessibility-section {
+  margin-bottom: 3rem;
+}
+
+.accessibility-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #f0f0f0;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.accessibility-card {
+  height: 100%;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.accessibility-card:hover {
+  transform: translateY(-4px);
+}
+
+.accessibility-card h3 {
+  color: #333;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.accessibility-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accessibility-card ul li {
+  margin-bottom: 0.5rem;
+  color: #666;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.accessibility-card ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #28a745;
+}
+
+.accessibility-section ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.accessibility-section ul li {
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.accessibility-section ul li:before {
+  content: "•";
+  position: absolute;
+  left: -1.5rem;
+  color: #ff5a5f;
+}
+
+.accessibility-link {
+  color: #ff5a5f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.accessibility-link:hover {
+  color: #ff7e82;
+  text-decoration: underline;
+}
