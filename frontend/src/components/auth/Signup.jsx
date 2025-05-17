@@ -13,7 +13,7 @@ const Signup = () => {
     const [userType, setUserType] = useState('Tenant'); // Added UserType state, default to Tenant
     // const [error, setError] = useState(''); // Using toast for errors
     const [loading, setLoading] = useState(false);
-    
+
     let navigate = useNavigate();
 
     const onSubmit = async event => {
@@ -37,20 +37,23 @@ const Signup = () => {
 
         try {
             // Use relative path for API call, Vite proxy will handle it
-            await axios.post('/api/auth/register', {
+            const response = await axios.post('/api/auth/register', {
                 Name: name, // Ensure backend expects 'Name' (capitalized)
                 Email: email,
                 Password: password,
-                UserType: userType 
+                UserType: userType
             });
             toast.dismiss(loadingToastId);
-            toast.success("Registration successful! Please log in.");
-            navigate("/login"); 
+            console.log("Signup successful, response:", response.data); // Log the response data
+            toast.success("Registration successful! Redirecting to plan selection."); // Updated message
+            navigate("/pricing", { state: { fromSignup: true } }); // Redirect to pricing page after signup and pass state
         } catch (err) {
             toast.dismiss(loadingToastId);
-            const errorMessage = err.response?.data?.message || "Signup failed. Please try again.";
+            const errorMessage = err.response
+                ? err.response.data?.message || `Server Error: ${err.response.status}`
+                : err.message || "Signup failed. Please try again.";
             toast.error(errorMessage);
-            console.error("Signup error:", err.response ? err.response.data : err.message);
+            console.error("Signup error:", err); // Log the full error object for better debugging
         }
         setLoading(false);
     };
@@ -144,12 +147,12 @@ const Signup = () => {
                             </label>
                         </div>
                     </div>
-                    
+
                     <button type="submit" className="form-button-spareroom" disabled={loading}>
                         {loading ? 'Creating Account...' : 'Create Account'}
                     </button>
                 </form>
-                
+
                 <div className="auth-switch-spareroom">
                     <p>Already have an account? <Link to="/login" className="auth-link-spareroom bold">Log In</Link></p>
                 </div>

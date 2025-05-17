@@ -1,0 +1,253 @@
+/* Pricing Page Styles */
+.pricing-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 10px; /* Reduced padding */
+  font-family: 'Nunito', sans-serif; /* Modern font */
+  background-color: #f9f9f9; /* Light grey background */
+}
+
+.pricing-header {
+  text-align: center;
+  margin-bottom: 30px; /* Reduced margin */
+}
+
+.pricing-header h1 {
+  font-size: 2rem; /* Smaller title */
+  margin-bottom: 10px;
+  color: #2a3439; /* Darker, more professional color */
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+.pricing-header p {
+  font-size: 1rem; /* Smaller text */
+  color: #555; /* Slightly darker text */
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.5; /* Improved readability */
+}
+
+.pricing-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Reduced spacing */
+  margin-bottom: 40px; /* Reduced margin */
+}
+
+.pricing-card {
+  background-color: #fff;
+  border-radius: 10px; /* More rounded corners */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  overflow: hidden;
+  width: 100%;
+  max-width: 280px; /* Smaller cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0; /* Subtle border */
+}
+
+.pricing-card:hover {
+  transform: translateY(-5px); /* More pronounced hover effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.pricing-card.featured {
+  transform: scale(1.03); /* Slightly larger featured card */
+  border: 2px solid #ff7961; /* Vibrant featured border color */
+  position: relative;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18); /* Even stronger shadow for featured */
+}
+
+.pricing-card.featured:hover {
+  transform: scale(1.03) translateY(-8px); /* Enhanced hover for featured */
+}
+
+.popular-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #ff7961; /* Featured tag color */
+  color: white;
+  padding: 4px 10px; /* Reduced padding */
+  font-size: 0.7rem; /* Smaller font */
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+  letter-spacing: 0.5px;
+}
+
+.pricing-card-header {
+  background-color: #f2f5f8; /* Lighter header background */
+  padding: 20px 15px; /* Reduced padding */
+  text-align: center;
+  border-bottom: 1px solid #d7dde4; /* Refined border color */
+  position: relative;
+}
+
+.pricing-card-header h2 {
+  margin: 0;
+  font-size: 1.6rem; /* Smaller header text */
+  color: #2a3439;
+  font-weight: 700;
+  text-align: center; /* Ensure text is centered */
+  margin-left: -10px; /* Shift slightly to the left */
+}
+
+.price {
+  margin-top: 10px; /* Reduced margin */
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.currency {
+  font-size: 1.3rem; /* Smaller font */
+  font-weight: 700;
+  color: #2a3439;
+}
+
+.amount {
+  font-size: 2.5rem; /* Smaller font */
+  font-weight: 700;
+  color: #2a3439;
+  line-height: 1;
+  margin: 0 5px; /* Reduced margin */
+}
+
+.period {
+  font-size: 0.9rem; /* Smaller font */
+  color: #555;
+}
+
+.pricing-card-body {
+  padding: 20px 15px; /* Reduced padding */
+}
+
+.features-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0 0 20px 0; /* Reduced margin */
+}
+
+.features-list li {
+  padding: 6px 0; /* Reduced padding */
+  border-bottom: 1px solid #e2e8f0;
+  color: #555; /* Slightly darker text */
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.8rem; /* Smaller font */
+  line-height: 1.3; /* Improved readability */
+}
+
+.features-list li:before {
+  content: "✓";
+  color: #50b848; /* Green checkmark */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+  font-size: 0.9rem; /* Smaller font */
+  top: 6px; /* Adjust vertical alignment */
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.subscribe-button {
+  width: 100%;
+  padding: 10px; /* Reduced padding */
+  font-size: 0.9rem; /* Smaller font */
+  font-weight: 600;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.subscribe-button:hover {
+  background-color: #3a8e34; /* Darker green on hover */
+}
+
+/* FAQ Section */
+.pricing-faq {
+  max-width: 800px;
+  margin: 0 auto 40px; /* Reduced margin */
+}
+
+.pricing-faq h2 {
+  text-align: center;
+  margin-bottom: 20px; /* Reduced margin */
+  font-size: 1.8rem; /* Smaller font */
+  color: #2a3439;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.faq-item {
+  margin-bottom: 15px; /* Reduced margin */
+  padding-bottom: 15px; /* Reduced padding */
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  font-size: 1rem; /* Smaller font */
+  color: #2a3439;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.faq-item p {
+  color: #555;
+  line-height: 1.5;
+  font-size: 0.9rem; /* Smaller font */
+}
+
+/* CTA Section */
+.pricing-cta {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  margin-top: 40px;
+}
+
+.pricing-cta h2 {
+  color: #2a3439;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.pricing-cta p {
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.contact-button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pricing-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pricing-card {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .pricing-card.featured {
+    transform: scale(1);
+  }
+  
+  .pricing-card.featured:hover {
+    transform: translateY(-5px);
+  }
+}
